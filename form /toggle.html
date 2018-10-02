@@ -1,0 +1,111 @@
+
+<style>
+
+  body {
+    top:50%;
+    left: 50%;
+    background:#414a6b;
+  }
+
+  .switcher_toggle:checked ~ .fat-content-label-more30per::after {
+    
+    display: block;
+  }
+  .fat-content-radio:disabled + .fat-content-label {
+    opacity: 0.4;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+  }
+
+  .visually-hidden:focus,   .visually-hidden:active {
+    outline: none;
+  }
+
+  .fat-content-label {
+    position: relative;
+    margin-right: 20px;
+    padding-left: 50px;
+  }
+
+  .fat-content-label:last-child {
+    margin-right: 0px;
+    outline: none;
+  }
+
+  .fat-content-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 44px;
+    height: 22px;
+    margin-top: -11px;
+    box-sizing: border-box;
+    opacity: 1;
+    outline: none;
+    border: 3px solid #00b6ff;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #00b6ff;
+    transition: .5s;
+  }
+
+  /* outline: none;
+      border: 5px solid #00b6ff;
+      border-radius: 50px;
+      box-shadow: 0 0 5px #00b6ff; */
+
+  .fat-content-label::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    margin-top: -13px;
+    padding: 0;
+    background-color: #00b6ff;
+    border-radius: 50%;
+    transition: .5s;
+  }
+
+  /* .fat-content-radio:disabled + .fat-content-label {
+    opacity: 0.4;
+  } */
+
+
+  .switcher_toggle:checked ~ .fat-content-label-more30per::after {
+    display: block;
+    margin-left: 22px;
+  }
+  .switcher_toggle:checked ~ .fat-content-label-more30per::before {
+    background-color: #01b6ff;
+    opacity: 0.7;
+  }
+
+  .wrapper {
+    margin-top: 30%;
+    margin-left: 30%;
+  }
+
+</style>
+
+
+<div class='wrapper'>
+<input type="checkbox" id="switcher_2" name="fat-content-radio" class="visually-hidden fat-content-radio switcher_toggle" value="more30percents">
+<label for="switcher_2" class="fat-content-label fat-content-label-more30per"></label>
+
+</div>

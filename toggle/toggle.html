@@ -1,0 +1,111 @@
+
+<style>
+
+  body {
+    top:50%;
+    left: 50%;
+    background:#414a6b;
+  }
+
+  .switcher_toggle:checked ~ .content-switcher_toggle::after {
+    display: block;
+  }
+  .swither-content:disabled + .content-switcher_label {
+    opacity: 0.4;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+  }
+
+  .visually-hidden:focus,   .visually-hidden:active {
+    outline: none;
+  }
+
+  .content-switcher_label {
+    position: relative;
+    margin-right: 20px;
+    padding-left: 50px;
+  }
+
+  .content-switcher_label:last-child {
+    margin-right: 0px;
+    outline: none;
+  }
+
+  .content-switcher_label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 44px;
+    height: 22px;
+    margin-top: -11px;
+    box-sizing: border-box;
+    opacity: 1;
+    outline: none;
+    border: 3px solid #00b6ff;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #00b6ff;
+    transition: .5s;
+  }
+
+  /* outline: none;
+      border: 5px solid #00b6ff;
+      border-radius: 50px;
+      box-shadow: 0 0 5px #00b6ff; */
+
+  .content-switcher_label::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    margin-top: -13px;
+    padding: 0;
+    background-color: #00b6ff;
+    border-radius: 50%;
+    transition: .5s;
+  }
+
+  .switcher_toggle:checked ~ .content-switcher_toggle::after {
+    display: block;
+    margin-left: 22px;
+  }
+  .switcher_toggle:checked ~ .content-switcher_toggle::before {
+    background-color: #01b6ff;
+    opacity: 0.7;
+  }
+
+  .wrapper {
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
+
+<div class='container'>
+  <div class='wrapper'>
+    <input type="checkbox" id="switcher_2" name="swither-content" class="visually-hidden swither-content switcher_toggle" value="more30percents">
+    <label for="switcher_2" class="content-switcher_label content-switcher_toggle"></label>
+  </div>
+</div>
