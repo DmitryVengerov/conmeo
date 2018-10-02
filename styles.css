@@ -1,0 +1,172 @@
+body {
+	margin:0;
+	padding:0;
+	background-color:#f0f0f0;
+}
+nav {
+	background-color:#ffffff;
+	border-bottom:1px solid #cccccc;
+}
+
+.header {
+	margin-left:15%;
+	margin-right:15%;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:960px;
+}
+.logo {
+	margin:30px 0 30px 0;
+}
+.button {
+	margin:auto 100px auto 100px;
+	color:#4a90e2;
+	border:2px solid;
+	padding:10px;
+	border-radius:7px;
+	margin-right:0px;
+}
+.main-container {
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:30px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:960px;
+	
+}
+.blog {
+	background-color:#ffffff;
+	padding:30px;
+	border-radius:7px;
+    border:1px solid #cccccc;
+	border-radius:7px;
+	width:600px;
+	height:600px;
+}
+.author {
+	display:flex;
+	flex-direction:row;
+	padding-bottom:20px;
+	
+}
+.logo-author img {
+	border-radius: 50%;
+}
+.head-text {
+	margin-left:10px;
+}
+.author-name {
+	font-size:15px;
+	margin-top:0px;
+	margin-bottom:5px;
+	font-family:Noto Sans, sans-serif;
+}
+.author-info,.date {
+	font-size:15px;
+	color:#cccccc;
+	margin-bottom:3px;
+	margin-top:3px;
+}
+.main-img-container img {
+	border-radius:10px;
+}
+
+.main-img-container {
+    display:inline-block;   
+    position:relative;
+}
+.main-img-container div { 
+    display: inline-block; 
+    position: absolute; 
+    bottom: 90px;
+	text-align:center;
+    color: white;
+}
+.main-img-container h2 {
+	font-size:27px;
+	font-family:Noto Sans, sans-serif;
+	font-weight: 150;
+	margin-bottom:10px;
+}
+.main-img-container p{
+	margin-top:5px;
+	font-size:20px;
+	text-align:center;
+	font-style: italic;
+	margin-left:80px;
+	margin-right:80px;
+}
+.sign {
+	color:#a3a3a3;
+	font-size:15px;
+	text-align:center;
+	margin-top:10px;	
+}
+.main-text {
+	font-size:23px;
+	margin-bottom:10px;
+}
+.main-text span {
+	font-style: italic;
+}
+.read-more {
+	color:#a3a3a3;
+	margin-top:10px;
+}
+	
+	
+.menu {
+	width:25%;
+}
+
+.grey-text {
+	color:#a3a3a3;
+	font-size:15px;
+	font-family:Noto Sans, sans-serif;
+	margin-bottom:0px;
+	margin-top:0px;
+}
+.black-text-top {
+	color:black;
+	font-size:18px;
+	margin-top:5px;
+	border-bottom:1px solid #cccccc;
+	padding-bottom:10px;
+}
+.article {
+	font-size:15px;
+	color:black;
+	font-family:Noto Sans, sans-serif;
+	margin-bottom:0px;
+}
+.article-author {
+	color:#a3a3a3;
+	font-size:15px;
+	font-family:Noto Sans, sans-serif;
+	margin-top:5px;
+}
+.article-1,.article-2,.article-3 {
+	margin-top:25px;
+	margin-bottom:25px;
+}
+.category-art {
+	margin-top:40px;
+}
+.article-last {
+	border-bottom:1px solid #cccccc;
+	padding-bottom:20px;
+}
+.bottom-nav {
+	display:flex;
+	
+}	
+.bottom-nav p {
+	padding-top:10px;
+	padding-right:10px;
+    padding-left:0px;
+	color:#a3a3a3;
+	font-family:Noto Sans, sans-serif;
+}	
