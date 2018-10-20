@@ -57,7 +57,7 @@ function add_node(width = 20, height = 20) {
 }
 
 function get_new_center(array_node, node) {
-  // console.log(array_node);
+  console.log("start ",node);
   key = Object.keys(node)
   for (let i = 0; i < key.length; i++) {
     switch (key[i]) {
@@ -77,7 +77,7 @@ function get_new_center(array_node, node) {
           }
 
         }
-                console.log('new center',temp_arr);
+        console.log('new center', temp_arr);
         array_node.push(add_node(temp_arr[0], temp_arr[1]))
         break;
       case 'b':
@@ -95,7 +95,7 @@ function get_new_center(array_node, node) {
               break;
           }
         }
-        console.log('new center',temp_arr);
+        console.log('new center', temp_arr);
         array_node.push(add_node(temp_arr[0], temp_arr[1]))
         break;
       case 'c':
@@ -104,17 +104,16 @@ function get_new_center(array_node, node) {
         for (let j = 0; j < node[key[i]].length; j++) {
           switch (j) {
             case 0:
-              temp_arr.push(node[key[i]][j] - 2)
+              temp_arr.push(node[key[i]][j] + 2)
               break;
             case 1:
-              temp_arr.push(node[key[i]][j] + 2)
+              temp_arr.push(node[key[i]][j] - 2)
               break;
             default:
               break;
           }
         }
-        // тут идет дубль из-за одинаковых значений центра
-        console.log('new center',temp_arr);
+        console.log('new center', temp_arr);
         array_node.push(add_node(temp_arr[0], temp_arr[1]))
         break;
       case 'd':
@@ -132,7 +131,7 @@ function get_new_center(array_node, node) {
               break;
           }
         }
-        console.log('new center',temp_arr);
+        console.log('new center', temp_arr);
         array_node.push(add_node(temp_arr[0], temp_arr[1]))
         break;
       default:
@@ -141,7 +140,7 @@ function get_new_center(array_node, node) {
   }
 }
 
-function wave(iter = 1, width = 10, height = 10) {
+function wave(iter = 1, width = 15, height = 15) {
   // создаем массив квадратиков (пустой)
   array_node = []
   array_node.push(add_node(width, height))
