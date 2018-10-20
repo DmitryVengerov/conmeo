@@ -56,6 +56,7 @@ function add_node(width = 20, height = 20) {
   return node
 }
 
+// ищет незанятую область, вокруг квадрата
 function get_new_center(array_node, node) {
   console.log("start ",node);
   key = Object.keys(node)
@@ -140,11 +141,14 @@ function get_new_center(array_node, node) {
   }
 }
 
-function wave(iter = 1, width = 15, height = 15) {
+// iter = 0 - кривая первого порядка
+// iter = 1 - кривая второго порядка
+// iter > 0 - in progress
+function wave(iter = 0, width = 15, height = 15) {
   // создаем массив квадратиков (пустой)
   array_node = []
   array_node.push(add_node(width, height))
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < iter; i++) {
     get_new_center(array_node, array_node[i])
   }
   return array_node
