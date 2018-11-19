@@ -10,31 +10,31 @@ function generate_node() {
 }
 
 // модифицируем координаты углов //
-function coord_a(width, height) {
+function coord_a(pos_x, pos_y) {
   arr = []
-  arr.push(width - 2)
-  arr.push(height - 2)
+  arr.push(pos_x - 2)
+  arr.push(pos_y - 2)
   return arr
 }
 
-function coord_b(width, height) {
+function coord_b(pos_x, pos_y) {
   arr = []
-  arr.push(width - 2)
-  arr.push(height + 2)
+  arr.push(pos_x - 2)
+  arr.push(pos_y + 2)
   return arr
 }
 
-function coord_c(width, height) {
+function coord_c(pos_x, pos_y) {
   arr = []
-  arr.push(width + 2)
-  arr.push(height - 2)
+  arr.push(pos_x + 2)
+  arr.push(pos_y - 2)
   return arr
 }
 
-function coord_d(width, height) {
+function coord_d(pos_x, pos_y) {
   arr = []
-  arr.push(width + 2)
-  arr.push(height + 2)
+  arr.push(pos_x + 2)
+  arr.push(pos_y + 2)
   return arr
 }
 //  модифицируем координаты углов  //
@@ -47,12 +47,12 @@ function coord_d(width, height) {
 //     "d": [30,30]
 //   }
 //
-function add_node(width = 20, height = 20) {
+function add_node(pos_x = 20, pos_y = 20) {
   node = generate_node()
-  node['a'] = coord_a(width, height)
-  node['b'] = coord_b(width, height)
-  node['c'] = coord_c(width, height)
-  node['d'] = coord_d(width, height)
+  node['a'] = coord_a(pos_x, pos_y)
+  node['b'] = coord_b(pos_x, pos_y)
+  node['c'] = coord_c(pos_x, pos_y)
+  node['d'] = coord_d(pos_x, pos_y)
   return node
 }
 
@@ -144,10 +144,11 @@ function get_new_center(array_node, node) {
 // iter = 0 - кривая первого порядка
 // iter = 1 - кривая второго порядка
 // iter > 0 - in progress
-function wave(iter = 0, width = 15, height = 15) {
+// pos_x, pos_y
+function wave(iter = 1, pos_x = 15, pos_y = 15) {
   // создаем массив квадратиков (пустой)
   array_node = []
-  array_node.push(add_node(width, height))
+  array_node.push(add_node(pos_x, pos_y))
   for (let i = 0; i < iter; i++) {
     get_new_center(array_node, array_node[i])
   }
